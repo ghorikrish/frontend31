@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inheritance Practice 1</h1>
+    <hr>
+
+    <script>
+        class MyPerimeter
+        {
+            getRadius(number)
+            {
+                let radius = number * number;
+                return radius;
+            }
+            getPi()
+            {
+                return 3.14;
+            }
+        }
+
+        class Circle extends MyPerimeter
+        {
+            constructor(radius)
+            {
+                super();
+                this.radius = radius;
+            }
+            getPerimeter()
+            {
+                let perimeter = 2 * super.getPi() * super.getRadius(this.radius);
+                return perimeter;
+            }
+        }
+
+        // volume = πr2h formula
+        class Cylinder extends MyPerimeter
+        {
+            constructor(radius,height)
+            {
+                super();
+                this.radius = radius;
+                this.height = height;
+            }
+            getPerimeter()
+            {
+                let perimeter = super.getPi() * super.getRadius(this.radius) * (this.height);
+                return perimeter;
+            }
+        }
+
+        let radius = parseInt(prompt("Enter circle radius ",0));
+        var c1 = new Circle(radius);
+        var perimeter = c1.getPerimeter().toFixed(2);
+        console.log(perimeter);
+
+        radius = parseInt(prompt("Enter Cylinder Radius ", 0));
+        let height = parseInt(prompt("Enter Cylinder Height",0));
+        let c2 = new Cylinder(radius,height);
+        perimeter = c2.getPerimeter().toFixed(2);
+        console.log(perimeter);
+
+    </script>
+</body>
+</html>

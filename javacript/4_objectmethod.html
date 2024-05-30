@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table
+        {
+            text-align: center;
+            background: #8ac0e4;
+        }
+        table>thead>tr
+        {
+            background: #e94a55;
+        }
+    </style>
+</head>
+<body>
+   <h1>Object Creatting Method 3</h1> 
+   <hr>
+
+   <table border="1" celpadding="5" width="75%" align="center">
+    <thead>
+        <tr>
+            <th>Srno</th>
+            <th>Emp_Name</th>
+            <th>Salary</th>
+            <th>PF</th>
+            <th>DA</th>
+            <th>TA</th>
+            <th>Net Salary</th>
+            <th>Perfomance</th>
+        </tr>
+    </thead>
+    <tbody id="output">
+
+    </tbody>
+   </table>
+
+   <script>
+
+    var count = 1;
+
+    function Employee (name,salary,pf,da,ta)
+    {
+        this.name = name,
+        this.salary =  salary,
+        this.pf =  pf,
+        this.da =  da,
+        this.ta =  ta,
+        this.netsalary =  this.salary + this.da + this.ta - this.pf,
+        this.performance =  'good',
+        this.display = function()
+        {
+            console.log(this.name,this.salary,this.pf,this.da,this.ta,this.netsalary,this.performance);
+        },
+        this.addRow = function()
+            {
+                document.getElementById('output').innerHTML += ` <tr>
+                 <td>${count++}</td>
+                 <td>${this.name}</td>
+                 <td>${this.salary}</td>
+                 <td>${this.pf}</td>
+                 <td>${this.da}</td>
+                 <td>${this.ta}</td>
+                 <td>${this.netsalary}</td>
+                 <td>${this.performancen}</td>
+             </tr>`;
+            }
+    }
+      
+         var om = new Employee("Om Goswami",100000,5000,8000,35000);
+            
+            om.display();
+            om.addRow();
+
+         var parth = new Employee("Parth Dodiya",110000,8000,6000,2500);
+    
+            parth.display();
+            parth.addRow();
+
+   </script>
+</body>
+</html>
+

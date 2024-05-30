@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table
+        {
+            text-align: center;
+            background: #8ac0e4;
+        }
+        table>thead>tr
+        {
+            background: #e94a55;
+        }
+    </style>
+</head>
+<body>
+   <h1>Object Creatting Method 3</h1> 
+   <hr>
+
+   <table border="1" celpadding="5" width="75%" align="center">
+    <thead>
+        <tr>
+            <th>Srno</th>
+            <th>Emp_Name</th>
+            <th>Salary</th>
+            <th>PF</th>
+            <th>DA</th>
+            <th>TA</th>
+            <th>Net Salary</th>
+            <th>Perfomance</th>
+        </tr>
+    </thead>
+    <tbody id="output">
+
+    </tbody>
+   </table>
+
+   <script>
+
+    var count = 1;
+
+    var employee = new Object({
+        name:"Krish Patel",
+        salary: 50000,
+        pf: 500,
+        da: 200,
+        ta: 300,
+        netsalary:  this.salary + this.da + this.ta + this.pf,
+        performance: 'very good',
+        display: function () {
+            console.log(this.name, this.salary, this.pf, this.da, this.ta, this.netsalary, this.performance);
+        },
+        
+        addRow:function()
+            {
+                document.getElementById('output').innerHTML += ` <tr>
+                 <td>${count++}</td>
+                 <td>${this.name}</td>
+                 <td>${this.salary}</td>
+                 <td>${this.pf}</td>
+                 <td>${this.da}</td>
+                 <td>${this.ta}</td>
+                 <td>${this.netsalary}</td>
+                 <td>${this.performance}</td>
+             </tr>`;
+            }
+    });
+
+    var om = employee;
+        om.name = "Om Goswami";
+        om.salary =  100000;
+        om.pf =  10000;
+        om.da =  5000;
+        om.ta =  3000;
+        om.netsalary =  om.salary + om.da + om.ta - om.pf;
+        om.performance =  'good';
+
+        om.display();
+        om.addRow();
+
+        var parth = employee;
+        parth.name ="Parth Dodiya";
+        parth.salary = 130000;
+        parth.pf = 11000;
+        parth.da = 6000;
+        parth.ta = 4000;
+        parth.netsalary = parth.salary + parth.da + parth.ta - parth.pf;
+        parth.performance = 'good';
+
+        parth.display();
+        parth.addRow();
+
+        var yug = employee;
+        yug.name ="Yug Ghori";
+        yug.salary = 170000;
+        yug.pf = 12000;
+        yug.da = 7000;
+        yug.ta = 5000;
+        yug.netsalary = yug.salary + yug.da + yug.ta - yug.pf;
+        yug.performance = ' very good';
+
+        yug.display();
+        yug.addRow();
+   
+   </script>
+</body>
+</html>
+

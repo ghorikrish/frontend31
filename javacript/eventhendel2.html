@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mybutton {
+            height: 70px;
+            width: 70px;
+            font-size: xx-large;
+            background: #4540e8;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Event Heandling Method 2</h1>
+    <table align="center" border="1" cellpadding="10" bgcolor="gray">
+        <tr>
+            <td>
+                <input type="button" value="" class="mybutton">
+            </td>
+            <td>
+                <input type="button" value="" class="mybutton">
+            </td>
+            <td>
+                <input type="button" value="" class="mybutton">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="" class="mybutton">
+            </td>
+            <td>
+                <input type="button" value="" class="mybutton">
+            </td>
+            <td>
+                <input type="button" value="" class="mybutton">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="" class="mybutton">
+            </td>
+            <td>
+                <input type="button" value="" class="mybutton">
+            </td>
+            <td>
+                <input type="button" value="" class="mybutton">
+            </td>
+        </tr>
+    </table>
+
+    <script src="common.js"></script>
+
+    <script>
+        // select all button that has class mybutton
+        var mybuttons = document.getElementsByClassName('mybutton');
+        console.log(mybuttons);
+        var symbol = 'X';
+        for (let i = 0; i <= 8; i++) {
+            mybuttons[i].onclick = function () {
+                this.value = symbol;
+                if (symbol === 'X')
+                    symbol = '0';
+                else
+                    symbol = 'X';
+                this.onclick = null;
+            }
+        }
+
+        // var win = 'You Win';
+        // for (let w = 0; w <= 8; w++) {
+        //     mybuttons[w].onclick = function () {
+        //         this.value = win;
+        //         if (win === 'X')
+        //         win = mybuttons 1,2,3;
+        //         else
+        //            win = 'You Loser';
+        //         this.onclick = null;
+        //     }
+        // }
+
+    </script>
+</body>
+
+</html>

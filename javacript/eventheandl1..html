@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Heandling Method 1</h1>
+    <table width="100%" border="1" align="center" cellpadding="5">
+        <tr>
+            <td  width="33%" align="center">
+                <img src="https://picsum.photos/200?random=1 " id="one  " onmouseenter="ImgZoom(this.id);">
+            </td>
+            <td  width="33%" align="center">
+                <img src="https://picsum.photos/200?random=2" id="two " onmouseenter="ImgZoom(this.id);">
+            </td>
+            <td  width="33%" align="center">
+                <img src="https://picsum.photos/200?random=3" id="three " onmouseenter="ImgZoom(this.id);">
+            </td>
+        </tr>
+    </table>
+
+    <script>
+         function ImgZoom(ImgId)
+        {
+            console.log(ImgId);
+            let height = document.getElementById(ImgId).height;
+            let width = document.getElementById(ImgId).width;
+            console.log(height,width);
+            height = parseInt(height);
+            width = parseInt(width);
+            
+            // height = height * 1.50 ;
+            // width = width * 1.50;
+            // console.log(height,width);
+            // document.getElementById(ImgId).height = height;
+            // document.getElementById(ImgId).width = width;
+
+            height = height / 1.25 ;
+            width = width / 1.25;
+            console.log(height,width);
+            document.getElementById(ImgId).height = height;
+            document.getElementById(ImgId).width = width;
+        }
+    </script>
+    
+</body>
+</html>
