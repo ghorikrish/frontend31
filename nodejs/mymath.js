@@ -19,3 +19,4 @@ var MyMath = {
 };
 
 module.exports = MyMath;
+
