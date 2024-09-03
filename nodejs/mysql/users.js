@@ -8,7 +8,7 @@ let register = function (request, response) {
    console.log(email,mobile,password);
    if(email === undefined || password === undefined || mobile === undefined)
    {
-       response.json([{ 'error': 'input is missing' }]);
+       response.json([{ 'error': 'First Fill Blanck Fields' }]);
    } 
    else 
    {
@@ -19,7 +19,7 @@ let register = function (request, response) {
             {
                console.log(error);
                if (error.code === 'ER_DUP_ENTRY') 
-                    response.json([{ 'error': "no" },{'success':'no'},{'message':'email/mobile is already registered with us'}]);
+                    response.json([{ 'error': "no" },{'success':'no'},{'message':'Your Email & Mobile Is Already Registered'}]);
                else 
                     response.json([{ 'error': "error occured" }]);
            }
@@ -36,7 +36,7 @@ let login = function (request, response) {
     let password = request.body.password;
     if(email === undefined || password === undefined)
     {
-        response.json([{'error':'input is missing'}]);
+        response.json([{'error':'Fill Blanck Fields'}]);
     }
     else 
     {
