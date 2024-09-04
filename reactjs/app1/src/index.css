@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+        .resume-header {
+            background-color: #e6c18b;
+            color: white;
+            padding: 20px;
+        }
+        .resume-section {
+            margin: 20px 0;
+        }
+        .resume-section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #343a40;
+        }
+       
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f5f6;
+        }
+    
+        .resume-header {
+            padding: 10px;
+        }
+    
+        .text-end {
+            padding-right: 200px;
+        }
+    
+        .resume-section {
+            margin: 20px 0;
+        }
+    
+        .resume-section h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #343a40;
+        }
+    
+        .row {
+            background-color: rgb(225, 224, 224);
+        }
+    
+        h2 {
+            padding-left: 10px;
+        }
+        h2>i{
+            padding-left: 30px;
+        }
+    
+        h4 {
+            background-color: rgb(109, 175, 232);
+            padding-left: 20px;
+            font-weight: bold;
+        }
+    
+        h6,
+        p {
+            padding-left: 30px;
+        }
+    
+        ul {
+            font-size: 20px;
+            padding-left: 50px;
+        }
+    
+        .tag {
+            font-size: 25px;
+        }
+   
